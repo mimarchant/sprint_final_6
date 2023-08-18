@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/phoneListFragment2">
 
+    <fragment
+        android:id="@+id/phoneListFragment2"
+        android:name="com.example.sprint_final_6.views.PhoneListFragment"
+        android:label="fragment_phone_list"
+        tools:layout="@layout/fragment_phone_list" >
+        <action
+            android:id="@+id/action_phoneListFragment2_to_phoneDetail"
+            app:destination="@id/phoneDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneDetail"
+        android:name="com.example.sprint_final_6.views.PhoneDetail"
+        android:label="fragment_phone_detail"
+        tools:layout="@layout/fragment_phone_detail" />
 </navigation>

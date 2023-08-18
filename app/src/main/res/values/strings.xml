@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="phonelistfragmenttitle">phoneListFragmentTitle</string>
     <string name="phonelistfragmentTitle">Phone Shop</string>
+    <string name="contactar_rea_de_ventas">Contactar área de ventas</string>
 </resources>

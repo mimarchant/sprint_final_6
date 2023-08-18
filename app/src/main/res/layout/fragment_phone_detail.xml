@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/primary_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/phoneDetailContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".views.PhoneDetail">
+
+        <ImageView
+            android:id="@+id/phoneDetailImg"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/phoneDetailLastPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/primary_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneDetailImg" />
+
+        <TextView
+            android:id="@+id/phoneDetailCurrentPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/primary_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/phoneDetailLastPrice"
+            app:layout_constraintStart_toStartOf="@+id/phoneDetailLastPrice"
+            app:layout_constraintTop_toBottomOf="@+id/phoneDetailLastPrice" />
+
+        <TextView
+            android:id="@+id/phoneDetailCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="TextView"
+            android:textColor="@color/primary_text"
+            app:layout_constraintEnd_toEndOf="@+id/phoneDetailCurrentPrice"
+            app:layout_constraintStart_toStartOf="@+id/phoneDetailCurrentPrice"
+            app:layout_constraintTop_toBottomOf="@+id/phoneDetailCurrentPrice" />
+
+        <ImageView
+            android:id="@+id/phoneDetailCreditImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_credit_card_24"
+            app:layout_constraintEnd_toEndOf="@+id/phoneDetailCredit"
+            app:layout_constraintTop_toBottomOf="@+id/phoneDetailCredit" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneDetailBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneDetailCreditImg">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/phoneDetailCardWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/light_primary_color"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp">
+
+                <TextView
+                    android:id="@+id/phoneDetailCardTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:text="TextView"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/primary_text"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/phoneDetailCardDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:padding="16dp"
+                    android:text="TextView"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneDetailCardTitle" />
+
+                <TextView
+                    android:id="@+id/phoneDetailCardPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="TextView"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneDetailCardDescription" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/phoneDetailBtn"
+            android:layout_width="0dp"
+            android:layout_height="65dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/accent_color"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/contactar_rea_de_ventas"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
